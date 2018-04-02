@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "GameOfLife_NetCore\Web.csproj", "{2861F9F9-01B0-4638-A46A-D853DF4EA325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "GameOfLife_NetCore\Web.csproj", "{2861F9F9-01B0-4638-A46A-D853DF4EA325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{EBD6E1B3-A21B-47D3-A787-2C0A64853DC1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstract.csproj", "{37A2FADE-2D39-4DA8-8A07-46E0E2919DCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{EBD6E1B3-A21B-47D3-A787-2C0A64853DC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{EBD6E1B3-A21B-47D3-A787-2C0A64853DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD6E1B3-A21B-47D3-A787-2C0A64853DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD6E1B3-A21B-47D3-A787-2C0A64853DC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37A2FADE-2D39-4DA8-8A07-46E0E2919DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37A2FADE-2D39-4DA8-8A07-46E0E2919DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37A2FADE-2D39-4DA8-8A07-46E0E2919DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37A2FADE-2D39-4DA8-8A07-46E0E2919DCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

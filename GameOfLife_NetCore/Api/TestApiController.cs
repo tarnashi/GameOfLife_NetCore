@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Abstract.Managers;
+using Core.Abstract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,17 +12,17 @@ namespace Web.Api
     [Route("api/TestApi")]
     public class TestApiController : Controller
     {
-        private readonly ITestManager _testManager;
+        private readonly ITestService _testService;
 
-        public TestApiController(ITestManager testManager)
+        public TestApiController(ITestService testService)
         {
-            _testManager = testManager;
+            _testService = testService;
         }
 
         [HttpPost]
         public JsonResult HelloWorld()
         {
-            string result = _testManager.HelloWorld();
+            string result = _testService.HelloWorld();
             return Json(result);
         }
     }

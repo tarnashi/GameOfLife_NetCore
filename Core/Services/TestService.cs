@@ -1,13 +1,13 @@
-﻿using Abstract.Managers;
+﻿using Core.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Managers
+namespace Core.Services
 {
-    public class TestManager : ITestManager
+    public class TestService : ITestService
     {
-        public TestManager()
+        public TestService()
         { }
 
         public string HelloWorld()
