@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "@Url.Action("HelloWorld", "TestApi")",
+                method: "POST",
+                success: function (data) {
+                    $("#divHello").append(data);
+                }
+            });
+        });
+    </script>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>This is a test page</p>
+    <div id="divHello"></div>
+</body>
+</html>
