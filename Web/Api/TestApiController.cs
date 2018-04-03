@@ -10,7 +10,7 @@ namespace Web.Api
 {
     [Produces("application/json")]
     [Route("api/TestApi")]
-    public class TestApiController : Controller
+    public class TestApiController : BaseApiController
     {
         private readonly ITestService _testService;
 

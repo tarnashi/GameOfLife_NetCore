@@ -19,24 +19,29 @@ namespace GameOfLife_NetCore
         {
             services.AddMvc();
 
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
             services.AddTransient<ITestService, TestService>();
+            services.AddTransient<IGameService, GameService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSession();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
             app.UseStaticFiles();
-
+            
             app.UseMvc(route =>
             {
                 route.MapRoute(
                     name: "default",
-                    template: "{controller=Test}/{action=Index}/{id?}");
+                    template: "{controller=Game}/{action=Index}/{id?}");
             });
         }
     }
