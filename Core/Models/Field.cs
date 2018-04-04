@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,11 +7,15 @@ namespace Core.Models
 {
     public abstract class Field
     {
+        [JsonProperty]
         public int Width { get; protected set; }
+        [JsonProperty]
         public int Height { get; protected set; }
+        [JsonProperty]
         public bool[,] CurrentField { get; protected set; }
+        public bool isBordered { get; protected set; }
 
-        public Field(int x, int y)
+        protected Field(int x, int y)
         {
             Width = x;
             Height = y;

@@ -8,6 +8,7 @@ namespace Core.Models
     {
         public LoopbackField(int x, int y) : base(x, y)
         {
+            isBordered = false;
         }
 
         protected override byte NumberOfNeighbors(int x, int y)

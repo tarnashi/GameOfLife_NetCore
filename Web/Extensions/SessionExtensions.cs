@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Core.Models;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
 namespace Web.Extensions

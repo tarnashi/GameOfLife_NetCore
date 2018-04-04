@@ -8,6 +8,7 @@ namespace Core.Models
     {
         public BorderedField(int x, int y) : base(x, y)
         {
+            isBordered = true;
         }
 
         protected override byte NumberOfNeighbors(int x, int y)
