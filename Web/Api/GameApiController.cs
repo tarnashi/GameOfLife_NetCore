@@ -6,8 +6,6 @@ using Web.Extensions;
 
 namespace Web.Api
 {
-    [Produces("application/json")]
-    [Route("api/GameApi")]
     public class GameApiController : BaseApiController
     {
         private readonly IGameService _gameService;

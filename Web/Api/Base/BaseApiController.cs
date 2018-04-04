@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Api
 {
+    [Route("api/[controller]/[action]/{id?}")]
     public class BaseApiController : Controller
     {
         private JsonResult JsonResponse(bool flagSuccess, object data = null, string message = "")
