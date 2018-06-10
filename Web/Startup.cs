@@ -41,7 +41,7 @@ namespace GameOfLife_NetCore
             {
                 route.MapRoute(
                     name: "default",
-                    template: "{controller=Game}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

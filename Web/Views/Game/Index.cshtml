@@ -15,17 +15,35 @@
     <script src="~/scripts/game.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(GetCurrentField());
+        $(document).ready(function () {
+            GetCurrentField();
+        });
     </script>
 
 </head>
 <body>
-    <input type="button" onclick="MakeMove()" value="MakeMove" />
-    <input type="button" onclick="ClearField()" value="ClearField" />
-    <input type="button" onclick="GetPlaner()" value="GetPlaner" />
-    <br><br>
-    <form id="Field" style="line-height: 0px">Form "Field"</form>
-    <br>
-    <a href="/Game">Назад</a>
+    <div id="start" style="display: none;">
+        <form id="startForm">
+            <input type="text" placeholder="Ширина поля" name="x" />
+            <input type="text" placeholder="Высота поля" name="y" />
+            <br>
+            <p>
+                <input type="radio" name="isBordered" value='true' />Ограниченное<br>
+                <input type="radio" name="isBordered" value='false' checked="checked" />Циклическое<br>
+            </p>
+            <input type="button" value="Начать игру" onclick="GetNewField()">
+        </form>
+    </div>
+
+    <div id="game" style="display: none;">
+        <input type="button" onclick="MakeMove()" value="MakeMove" />
+        <input type="button" onclick="ClearField()" value="ClearField" />
+        <input type="button" onclick="GetPlaner()" value="GetPlaner" />
+        <input type="button" onclick="StartNewGame()" value="StartNewGame" />
+        <br><br>
+        <form id="Field" style="line-height: 0px">Form "Field"</form>
+        <br>
+        <a href="/Home">Назад</a>
+    </div>
 </body>
 </html>

@@ -27,6 +27,37 @@ function GetCurrentField() {
             success: function (response) {
                 if (response.data) {
                     DrawField(response.data);
+                    $("div#game").show();
+                }
+                else {
+                    StartNewGame();
+                }
+            }
+        });
+}
+
+function GetNewField() {
+    var fieldSettings = $("#startForm").serialize();
+    if (!fieldSettings)
+        return;
+    $.ajax
+        ({
+            dataType: "json",
+            url: "/api/game/CreateField",
+            type: "POST",
+            data: fieldSettings,
+            cashe: false,
+            success: function (response) {
+                if (response.success) {
+                    DrawField(response.data);
+                    $("div#start").hide();
+                    $("div#game").show()
+                }
+                else {
+                    $("div#start").show();
+                    $("div#game").hide();
+                    if (response.message)
+                        alert(response.message);
                 }
             }
         });
@@ -80,6 +111,11 @@ function MakeMove(x, y) {
                 DrawField(response.data);
             }
         });
+}
+
+function StartNewGame() {
+    $("div#start").show();
+    $("div#game").hide()
 }
 
 function GetPlaner() {

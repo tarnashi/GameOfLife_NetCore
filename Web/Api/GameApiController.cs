@@ -25,6 +25,8 @@ namespace Web.Api
         [HttpPost]
         public JsonResult CreateField(int x, int y, bool isBordered)
         {
+            if (x < 3 || y < 3)
+                return FailJsonResponse("Длина и ширина поля должны быть не меньше трех");
             Field field = _gameService.GetEmptyField(x, y, isBordered);
             HttpContext.Session.Set<Field>("Field", field);
             HttpContext.Session.SetString("FieldType", (field.isBordered) ? "bordered" : "loopback");
